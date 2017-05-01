@@ -1,30 +1,22 @@
-import './index.html';
-import './index.less';
 import dva from 'dva';
-
+import Loading from 'dva-loading';
 import { browserHistory } from 'dva/router';
-Object.assign(browserHistory, {
-  goSmartBack: (backRoute) => {
-    if (window.history.length > 1) {
-      browserHistory.goBack();
-    } else {
-      browserHistory.push(backRoute || '/');
-    }
-  },
-});
+import './index.less';
 
 
 // 1. Initialize
 const app = dva({
-  history: browserHistory,
+   history: browserHistory,
 });
 
-
 // 2. Plugins
-//app.use({});
+app.use(Loading({
+  namespace: 'loading'
+  // effects: enable effects level loading state
+}));
 
 // 3. Model
-//app.model(require('./models/example'));
+// app.model(require('./models/example'));
 
 // 4. Router
 app.router(require('./router'));

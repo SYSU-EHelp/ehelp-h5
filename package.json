@@ -1,23 +1,37 @@
 {
-  "private": true,
+  "scripts": {
+    "build": "roadhog build",
+    // "precommit": "npm run lint",
+    "lint": "eslint --ext .js src test",
+    "start": "roadhog server"
+  },
   "dependencies": {
-    "antd-mobile": "^0.9.0",
-    "babel-runtime": "^6.20.0",
-    "dva": "^1.0.0",
-    "react": "^15.1.0",
-    "react-dom": "^15.1.0"
+    "antd-mobile": "^1.1.1",
+    "dva": "^1.2.1",
+    "dva-loading": "^0.2.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
   },
   "devDependencies": {
-    "babel-plugin-dva-hmr": "^0.2.1",
-    "babel-plugin-import": "^1.0.1",
-    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-dva-hmr": "^0.3.2",
+    "babel-plugin-import": "^1.1.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-runtime": "^6.22.0",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
     "expect": "^1.20.2",
-    "redbox-react": "^1.2.10",
-    "roadhog": "^0.3.2"
+    "husky": "^0.13.1",
+    "postcss-pxtorem": "^4.0.0",
+    "redbox-react": "^1.3.3",
+    "roadhog": "^0.6.0-beta.6",
+    "svg-sprite-loader": "^2.0.1"
   },
-  "scripts": {
-    "start": "roadhog server",
-    "build": "roadhog build",
-    "test": "roadhog test"
-  }
+  "engines": {
+    "install-node": "6.9.2"
+  },
+  "private": true
 }
