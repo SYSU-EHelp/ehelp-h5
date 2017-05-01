@@ -1,5 +1,2 @@
-# dva-antd-mobile-starter
+# ehelp-h5
 
-> Get started with Dva.js and Ant Design mobile.
-
-![Screen Shot](screenshot.png)
